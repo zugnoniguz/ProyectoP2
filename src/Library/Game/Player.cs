@@ -28,4 +28,9 @@ public class Player
     {
         this.getCurrentPokemon().Attack(other.getCurrentPokemon(), moveIdx);
     }
+
+    public bool isDead()
+    {
+        return this.Party.All((p) => p.Health == 0);
+    }
 }
